@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lionel Messi - Página Web</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a1628, #1a237e);
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(0, 0, 0, 0.45);
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            color: #ffd700;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.25rem;
+            color: #bbdefb;
+        }
+
+        /* Galería de imágenes */
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 22px;
+            margin-bottom: 35px;
+        }
+
+        .galeria figure {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+            transition: transform 0.3s ease;
+        }
+
+        .galeria figure:hover {
+            transform: translateY(-8px);
+        }
+
+        .galeria img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .galeria figcaption {
+            padding: 12px;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #e3f2fd;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        /* Información personal */
+        .info {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .info h2 {
+            color: #ffd700;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ffd700;
+            padding-bottom: 8px;
+        }
+
+        .info ul {
+            list-style: none;
+        }
+
+        .info li {
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+            padding-left: 12px;
+            border-left: 4px solid #42a5f5;
+        }
+
+        .info strong {
+            color: #90caf9;
+        }
+
+        /* Logros */
+        .logros {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .logros h2 {
+            color: #ffd700;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+        }
+
+        .trophies {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 18px;
+        }
+
+        .trophy {
+            background: rgba(0, 0, 0, 0.35);
+            padding: 20px 12px;
+            border-radius: 14px;
+            text-align: center;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .trophy:hover {
+            transform: translateY(-6px);
+            background: rgba(255, 215, 0, 0.15);
+        }
+
+        .trophy h3 {
+            color: #ffd700;
+            font-size: 1.8rem;
+            margin-bottom: 6px;
+        }
+
+        .trophy p {
+            font-size: 0.95rem;
+            color: #e3f2fd;
+        }
+
+        /* Biografía */
+        .bio {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .bio h2 {
+            color: #ffd700;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        .bio p {
+            font-size: 1.1rem;
+            text-align: justify;
+            margin-bottom: 15px;
+            color: #e8eaf6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #90caf9;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 700px) {
+            header h1 {
+                font-size: 2.1rem;
+            }
+
+            .galeria img {
+                height: 240px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- ENCABEZADO -->
+        <header>
+            <h1>Lionel Messi</h1>
+            <p>El mejor jugador de fútbol de todos los tiempos</p>
+        </header>
+
+        <!-- GALERÍA DE IMÁGENES -->
+        <section class="galeria">
+            <figure>
+                <img src="images/messipelota.jpg" alt="Lionel Messi manejando la pelota">
+                <figcaption>Messi con la pelota – Selección Argentina</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/messicancha.jpg" alt="Lionel Messi en la cancha">
+                <figcaption>Messi en la cancha – Concentrado</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/messi2018.jpg" alt="Lionel Messi con la camiseta negra de Argentina">
+                <figcaption>Messi 2018 – Camiseta alternativa</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/messicara.jpg" alt="Retrato de Lionel Messi">
+                <figcaption>Retrato de Lionel Messi</figcaption>
+            </figure>
+        </section>
+
+        <!-- INFORMACIÓN PERSONAL -->
+        <section class="info">
+            <h2>Información Personal</h2>
+            <ul>
+                <li><strong>Nombre completo:</strong> Lionel Andrés Messi Cuccittini</li>
+                <li><strong>Nacimiento:</strong> 24 de junio de 1987 (Rosario, Argentina)</li>
+                <li><strong>Altura:</strong> 1,70 m</li>
+                <li><strong>Posición:</strong> Delantero / Extremo derecho</li>
+                <li><strong>Pie hábil:</strong> Izquierdo</li>
+                <li><strong>Club actual:</strong> Inter Miami CF (MLS)</li>
+                <li><strong>Selección:</strong> Argentina (Capitán)</li>
+                <li><strong>Dorsal:</strong> 10</li>
+            </ul>
+        </section>
+
+        <!-- LOGROS -->
+        <section class="logros">
+            <h2>Logros Destacados</h2>
+            <div class="trophies">
+                <div class="trophy">
+                    <h3>8</h3>
+                    <p>Balones de Oro</p>
+                </div>
+                <div class="trophy">
+                    <h3>1</h3>
+                    <p>Copa del Mundo<br>(Qatar 2022)</p>
+                </div>
+                <div class="trophy">
+                    <h3>2</h3>
+                    <p>Copas América<br>(2021 y 2024)</p>
+                </div>
+                <div class="trophy">
+                    <h3>4</h3>
+                    <p>Champions League</p>
+                </div>
+                <div class="trophy">
+                    <h3>10</h3>
+                    <p>Ligas españolas</p>
+                </div>
+                <div class="trophy">
+                    <h3>+800</h3>
+                    <p>Goles en su carrera</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- BIOGRAFÍA -->
+        <section class="bio">
+            <h2>Biografía</h2>
+            <p>
+                Lionel Messi nació en Rosario, Argentina. Desde muy pequeño mostró un talento excepcional para el fútbol. 
+                A los 13 años se mudó a España para unirse a las inferiores del FC Barcelona, club donde desarrolló 
+                prácticamente toda su carrera profesional y se convirtió en una leyenda mundial.
+            </p>
+            <p>
+                Con el Barcelona ganó 35 títulos, incluyendo 4 Champions League y 10 Ligas. En 2021 se unió al 
+                Paris Saint-Germain y en 2023 firmó con el Inter Miami de la MLS, donde continúa brillando.
+            </p>
+            <p>
+                Con la Selección Argentina logró su mayor sueño: ganar la Copa del Mundo en Qatar 2022, además de 
+                dos Copas América (2021 y 2024). Es considerado por muchos como el mejor jugador de la historia del fútbol.
+            </p>
+        </section>
+
+        <footer>
+            <p>Página creada para la Clase 3: Página Web con imágenes • Lionel Messi</p>
+        </footer>
+    </div>
+</body>
+</html>
